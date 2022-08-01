@@ -24,7 +24,7 @@ class _InputOTPCodeScreenState extends State<InputOTPCodeScreen> {
               ),
               TextField(
                 autofillHints: const [AutofillHints.oneTimeCode],
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
                 autofocus: true,
                 onChanged: (value) {
                   print("value: $value");
