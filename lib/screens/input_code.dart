@@ -14,13 +14,29 @@ class _InputOTPCodeScreenState extends State<InputOTPCodeScreen> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-          child: TextField(
-            autofillHints: const [AutofillHints.oneTimeCode],
-            keyboardType: TextInputType.number,
-            autofocus: true,
-            onChanged: (value) {
-              print("value: $value");
-            },
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text("Some text after"),
+                ),
+              ),
+              TextField(
+                autofillHints: const [AutofillHints.oneTimeCode],
+                keyboardType: TextInputType.number,
+                autofocus: true,
+                onChanged: (value) {
+                  print("value: $value");
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text("Some text after"),
+                ),
+              )
+            ],
           ),
         ),
       ),
