@@ -15,6 +15,8 @@ class _InputOTPCodeScreenState extends State<InputOTPCodeScreen> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
           child: TextField(
+            autofillHints: const [AutofillHints.oneTimeCode],
+            keyboardType: TextInputType.number,
             autofocus: true,
             onChanged: (value) {
               print("value: $value");
